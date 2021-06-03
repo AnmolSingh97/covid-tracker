@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.card-container{
+  text-align: center;
+}
+
+.root{
+  width: 400px;
+}
+
+.table-margin{
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.text-heading{
+  margin-top: 50px;
+}

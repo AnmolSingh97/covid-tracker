@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import DataTracker from './components/DataTracker';
+import {AppBar, CssBaseline, Typography, Toolbar} from '@material-ui/core';
 
 function App() {
+
+  const [apiData, setApiData] = useState('');
+  const [mpData, setmpData] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <CssBaseline />
+        <AppBar color='primary' position='relative' gutterBottom>
+          <Toolbar>
+          <Typography variant='h6'> Covid Tracker</Typography>
+          </Toolbar>
+        </AppBar>
+      <DataTracker apiData={apiData} setApiData={setApiData} mpData={mpData} setmpData={setmpData} />
     </div>
   );
 }

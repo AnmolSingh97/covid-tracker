@@ -36,7 +36,6 @@ function DataTracker({apiData, setApiData, mpData, setmpData}) {
     return (
         <div>
             <Typography className="text-heading" variant='h5' color='textPrimary' m={2} align='center' gutterBottom>Covid cases in Indore</Typography>
-            <Typography className="text-heading" variant='body' color='textPrimary' m={2} align='left' gutterBottom>State : Madhya Pradesh</Typography>
             <br /> <br />
             <div className='table-margin'>
             <TableContainer component={Paper}>

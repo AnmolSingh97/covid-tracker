@@ -27,6 +27,7 @@ function DataTracker({apiData, setApiData, mpData, setmpData}) {
     .then(response => {
         console.log(response.data.MP.districts.Indore.delta7);
         setApiData(response.data.MP.districts.Indore.delta7);
+        setmpData(response.data.MP.delta7);
     }).catch(error => {
         console.log(error);
     });
@@ -35,7 +36,7 @@ function DataTracker({apiData, setApiData, mpData, setmpData}) {
     return (
         <div>
             <Typography className="text-heading" variant='h5' color='textPrimary' m={2} align='center' gutterBottom>Covid cases in Indore</Typography>
-            <Typography className="text-heading" variant='body' color='textPrimary' m={2} align='left' gutterBottom>{apiData}</Typography>
+            <Typography className="text-heading" variant='body' color='textPrimary' m={2} align='left' gutterBottom>State : Madhya Pradesh</Typography>
             <br /> <br />
             <div className='table-margin'>
             <TableContainer component={Paper}>
